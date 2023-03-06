@@ -306,27 +306,15 @@ ul{
   cursor: pointer;
 }
 
+/* About Page */
 #aboutus-wrapper{
   display: grid;
-  height: 100vh;
   grid-template-columns: 25% 25% 50%;
   padding: 40px;
-  margin: 60px auto;
+  margin: 3rem auto;
   width: 120rem;
 }
-#aboutus{
-  border-radius: 10px;
-}
-#aboutushead{
-  font-size: 28px;
-}
-#aboutushead2{
-  font-size: 30px;
-  margin-left: 600px;
-  margin-right: 600px;
-  color: white;
-  
-}
+
 #aboutus2{
   margin-top: 100px;
   margin-bottom: 20px;
@@ -342,25 +330,44 @@ ul{
   margin-top: 2rem;
   margin-left: 500px;
 }
-#chooseus{
-  font-family: 'Poppins';
-  font-size: 7rem;
-  font-weight: 400;
-}
-#icons{
-  color: white;
-  height: 200px;
-  font-weight: 600;
-  width: 200px;
-  block-size: 150px;
-  border-radius: 10px;
-  margin-bottom: 5rem;
+#choose-us-wrapper{
+  background: #1e1e1e;
   text-align: center;
-  font-size: 25px;
-  margin-top: 5rem;
-  margin-right: 250px;
-  margin-left: 250px;
+  font-size: 1.2rem;
+  color: white;
+  padding: 2rem 5rem;
 }
+#choose-us-heading{
+  font-family: 'Poppins';
+  font-size: 6rem;
+  font-weight: 400;
+  color: #FF9F0D;
+}
+#choose-us-wrapper > p:last-child{
+  margin-top: 2rem;
+}
+
+.icons{
+  padding: 5rem 20rem;
+}
+
+.icons li{
+  padding: 0 5rem;
+}
+
+.icons li > p{
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.icons li > p:last-child{
+  font-size: 1.1rem;
+  font-weight: 200;
+  /* padding: 0 2rem; */
+}
+
 #meetourdev{
   border-radius: 10px;
   opacity: 0.2;
