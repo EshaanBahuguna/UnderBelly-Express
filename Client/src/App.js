@@ -4,6 +4,7 @@ import HomePage from './components/HomePage';
 import AdminPage from './components/AdminPage/AdminPage';
 import ErrorPage from './components/ErrorPage';
 import CategoryItems from './components/CategoryItems';
+import AboutPage from './components/AboutPage';
 
 import {createBrowserRouter, RouterProvider} from 'react-router-dom';
 
