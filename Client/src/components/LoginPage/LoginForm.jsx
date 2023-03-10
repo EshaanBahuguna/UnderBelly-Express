@@ -49,6 +49,7 @@ export default function LoginForm({register, setOutput, clearOutput, showOutput}
                     clearOutput();
         
                     if(response.success){
+                        localStorage.setItem('userInfo', '');
                         navigate(`/${response.userId}/categories`);
                     }
                 })

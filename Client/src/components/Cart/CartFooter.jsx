@@ -11,8 +11,8 @@ export default function CartFooter({items, onPlacingOrder}){
     }();
     const tax = Math.ceil(0.18 * subtotal), totalAmount = tax + subtotal;
 
-    const address = JSON.parse(localStorage.getItem('userInfo'))
-        .addresses.filter(address => address.default === true)[0].address;
+    const localUserInfo = JSON.parse(localStorage.getItem('userInfo'));
+    const address = localUserInfo.addresses.length > 0? localUserInfo.addresses.filter(address => address.default === true)[0].address : 'No Addresses added.';
 
     // console.log(address);    
 

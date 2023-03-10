@@ -707,11 +707,11 @@ transition: background-size 0.3s ease;
 #overlay > img{
   z-index: -1;
 }
-h1{
+/* h1{
   font-size: 7rem;
   font-family: 'La Belle Aurore', cursive;
   font-weight: 400;
-}
+} */
 #polaroid{
   width: 380px;
   /* height: 700px; */
