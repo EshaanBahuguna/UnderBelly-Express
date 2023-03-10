@@ -11,6 +11,7 @@ import MyOrders from './components/MyOrders/MyOrders';
 
 import {createBrowserRouter, RouterProvider, useParams} from 'react-router-dom';
 import Search from './components/AdminPage/Search';
+import AboutPage from './components/AboutPage';
 
 
 function App() {
@@ -80,6 +81,10 @@ function App() {
     {
       path: '/:userId/search/:searchQuery', 
       element: <CategoryItems />
+    },
+    {
+      path: '/:userId/about', 
+      element: <AboutPage />
     }
   ])  
 
