@@ -79,24 +79,24 @@ export default function AboutPage(){
 
             </ul>
             
-            <div>
+            {/* <div>
                 <div id='overlay'>
-                    <img id='meetourdev'  src={require('../assets/images/meet.jpeg')} alt="meet" width="2300" height="700" />
+                    <img  src={require('../assets/images/meet.jpeg')} alt="meet" width="2300" height="700" />
+                    <ul className='row-alignment'>
+                        <li id='pic'> <img id='pic' src={require('../assets/images/eshaan.jpeg')} alt="eshaan" width="380" height="450" />
+                        <div id='polaroid'> <b>Eshaan Bahuguna</b>  <br /> Read more </div></li>
+
+                        <li id='pic'> <img id='pic' src={require('../assets/images/Asmi.jpg')} alt="eshaan" width="380" height="450" />
+                        <div id='polaroid'> <b>Asmi Bhardwaj</b>  <br /> Read more</div></li>
+
+                        <li id='pic'> <img id='pic' src={require('../assets/images/Parth.jpg')} alt="eshaan" width="380" height="450" />
+                        <div id='polaroid'> <b>Parth Dubey</b>  <br /> Read more</div></li>
+
+                        <li id='pic'> <img id='pic' src={require('../assets/images/nabiha.jpeg')} alt="eshaan" width="380" height="450" />
+                        <div id='polaroid'> <b>  Nabiha Khan </b> <br /> Read more</div></li>
+                    </ul>
                 </div>
-                <ul className='row-alignment'>
-                    <li id='pic'> <img id='pic' src={require('../assets/images/eshaan.jpeg')} alt="eshaan" width="380" height="450" />
-                    <div id='polaroid'> <b>Eshaan Bahuguna</b>  <br /> Read more </div></li>
-
-                    <li id='pic'> <img id='pic' src={require('../assets/images/Asmi.jpg')} alt="eshaan" width="380" height="450" />
-                    <div id='polaroid'> <b>Asmi Bhardwaj</b>  <br /> Read more</div></li>
-
-                    <li id='pic'> <img id='pic' src={require('../assets/images/Parth.jpg')} alt="eshaan" width="380" height="450" />
-                    <div id='polaroid'> <b>Parth Dubey</b>  <br /> Read more</div></li>
-
-                    <li id='pic'> <img id='pic' src={require('../assets/images/nabiha.jpeg')} alt="eshaan" width="380" height="450" />
-                    <div id='polaroid'> <b>  Nabiha Khan </b> <br /> Read more</div></li>
-                </ul>
-            </div>
+            </div> */}
                     
      
                  

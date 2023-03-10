@@ -368,16 +368,20 @@ ul{
   /* padding: 0 2rem; */
 }
 
-#meetourdev{
+/* #meetourdev{
   border-radius: 10px;
   opacity: 0.2;
   position: relative;
   text-align: center;
   color: white;
-}
+} */
 #overlay{
   background: #FF9F0D;
   border-radius: 10px;
+  z-index: 1;
+}
+#overlay > img{
+  z-index: -1;
 }
 h1{
   font-size: 7rem;
