@@ -13,12 +13,12 @@ const Colors = {
 }
 
 // Width is in percentages
-export function Divider({width, color, height}){
+export function Divider({width, color, height, margin}){
     const style = {
         width: width? width: '100%',
         height: height? height: '2px',
         background: color? color: 'white',
-        margin: '0.2rem'
+        margin: margin ? margin :'0.2rem'
     }
 
     return (<div style={style}></div>)

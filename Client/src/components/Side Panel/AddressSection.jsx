@@ -236,7 +236,7 @@ export default function AddressSection({userId, userInfo, loadUserData, setAlert
 
                 <div style={{alignSelf: 'start'}}>
                     <div style={{marginBottom: '1rem'}} >
-                        <Link to={`/${userId}/orders`} style={{textDecoration: 'none', color: 'inherit', alignItems: 'center'}} className='row-alignment'>
+                        <Link to={`/${userId}/myOrders`} style={{textDecoration: 'none', color: 'inherit', alignItems: 'center'}} className='row-alignment'>
                             <GridViewIcon /> 
                             <p style={{marginLeft: '1rem'}}>My Orders</p>
                         </Link>

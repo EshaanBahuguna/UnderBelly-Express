@@ -50,7 +50,8 @@ const User = mongoose.model('User', {
                     itemId: String
                 }
             ], 
-            totalAmount: Number, 
+            totalAmount: Number,
+            address: String,  
             status: String
         }
     ]
@@ -202,6 +203,26 @@ app.get('/search/:searchQuery', (req, res)=>{
             }
 
             res.json(response);
+        }
+    })
+})
+
+app.get('/:userId/orders', (req, res)=>{
+    console.log(req.params);
+
+    User.findById(req.params.userId, {previousOrders: 1}, (err, orders)=>{
+        if(!err){
+            res.json({orders: orders.previousOrders});
+        }
+    })
+})
+
+app.get('/:userId/ratedItems', (req, res)=>{
+    console.log(req.params);
+
+    User.findById(req.params.userId, {itemsRated: 1}, (err, ratedItems)=>{
+        if(!err){
+            res.json({itemsRated: ratedItems.itemsRated});
         }
     })
 })
@@ -508,6 +529,47 @@ app.post('/:userId/order', (req, res)=>{
         }
     })
 })
+
+app.post('/:userId/rateItem', (req, res)=> {
+    console.log(req.params, req.body);
+
+    // Update currentRating for Item
+    Product.findOne({'items._id': req.body.itemId}, (err, foundItem)=>{
+        if(!err){
+            foundItem.items.forEach(item => {
+                if(String(item._id) === req.body.itemId){
+                    item.userRatings.push({
+                        rating: req.body.value, 
+                        userId: req.params.userId
+                    });
+        
+                    // Calculate new currentRating
+                    let ratingSum = 0;
+                    item.userRatings.forEach(rating => {
+                        ratingSum += rating.rating;
+                    })
+        
+                    item.currentRating = ratingSum / item.userRatings.length;
+                }
+            })
+            foundItem.save((err)=>{
+                if(!err){
+                    console.log('Item Rating updated for ' + req.body.itemId);
+                }
+            });
+        }
+    })
+
+    // Push Item to Rated Items for User
+    User.findByIdAndUpdate(req.params.userId, {$push: {itemsRated: req.body.itemId}}, (err)=> {
+        if(!err){
+            console.log('New Item id: ' + req.body.itemId + ' saved to ratedItems for User: ' + req.params.userId);
+            
+            res.json({success: true});  
+        }
+    })
+})
+
 
 //Contact Page
 app.post('/contact', (req, res) => {

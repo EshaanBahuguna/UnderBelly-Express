@@ -14,7 +14,7 @@ export default function CartFooter({items, onPlacingOrder}){
     const address = JSON.parse(localStorage.getItem('userInfo'))
         .addresses.filter(address => address.default === true)[0].address;
 
-    console.log(address);
+    // console.log(address);    
 
     return (
         <div id='cart-footer' >

@@ -535,7 +535,12 @@ transition: background-size 0.3s ease;
 }
 
 
-
+/* My Orders Page */
+#my-orders-section{
+  background: #FF9F0D;
+  height: 39rem;
+  padding: 2rem 6rem;
+}
 
 
 

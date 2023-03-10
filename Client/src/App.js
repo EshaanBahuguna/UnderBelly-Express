@@ -7,6 +7,7 @@ import CategoryItems from './components/CategoryItems';
 import ContactPage from './components/Contacts';
 import CartPage from './components/Cart/Cart';
 import AllItemsPage from './components/AdminPage/AllItemsPage';
+import MyOrders from './components/MyOrders/MyOrders';
 
 import {createBrowserRouter, RouterProvider, useParams} from 'react-router-dom';
 import Search from './components/AdminPage/Search';
@@ -71,6 +72,10 @@ function App() {
     {
       path: '/:userId/cart',
       element: <CartPage />
+    },
+    {
+      path: '/:userId/myOrders', 
+      element: <MyOrders />
     },
     {
       path: '/:userId/search/:searchQuery', 
